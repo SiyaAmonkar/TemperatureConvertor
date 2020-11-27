@@ -11,7 +11,7 @@
 <body>
 <jsp:include page="header.jsp"/>
 <main class="container">
-    <form action="/convert" method="post" class="w-100">
+    <form action="/converter/" method="post" class="w-100">
         <div class="card m-5">
             <div class="card-header bg-secondary">
                 <h5 class="card-title text-white">Конвертер температуры</h5>

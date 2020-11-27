@@ -9,7 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>temperature_converter Maven Webapp</name>
+  <name>Temperature Converter Maven Webapp</name>
 
   <url>http://localhost:8080/converter</url>
 
