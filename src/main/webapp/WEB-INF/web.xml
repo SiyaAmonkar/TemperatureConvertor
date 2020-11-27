@@ -6,12 +6,12 @@
   <display-name>Temperature Converter</display-name>
 
   <servlet>
-    <servlet-name>homeServlet</servlet-name>
-    <servlet-class>org.example.converter.HomeServlet</servlet-class>
+    <servlet-name>converterServlet</servlet-name>
+    <servlet-class>org.example.converter.ConverterServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>homeServlet</servlet-name>
+    <servlet-name>converterServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
