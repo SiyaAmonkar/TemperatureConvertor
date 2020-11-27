@@ -10,8 +10,10 @@ public class TemperatureConverter {
         return TemperatureMeasureUnit.CELSIUS;
     }
 
-    public double convert(double value, TemperatureMeasureUnit srcUnit, TemperatureMeasureUnit resUnit) {
-        if (srcUnit == resUnit) return value;
+    public double convert(double value, String src, String res) {
+        if (src.equals(res)) return value;
+        TemperatureMeasureUnit srcUnit = getMeasureUnit(src);
+        TemperatureMeasureUnit resUnit = getMeasureUnit(res);
         if (srcUnit == TemperatureMeasureUnit.CELSIUS) {
             if (resUnit == TemperatureMeasureUnit.KELVIN) {
                 return new CelsiusConverter(value).inKelvin();

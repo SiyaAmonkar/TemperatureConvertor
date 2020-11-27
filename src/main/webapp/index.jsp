@@ -26,25 +26,28 @@
                 <div class="form-row">
                     <div class="col-md-4">
                         <label for="srcValue">Значение температуры
+                            <% double value = (Double) request.getAttribute("srcValue"); %>
                             <input type="number" id="srcValue" name="srcValue" class="form-control"
-                                   placeholder="Значение" required>
+                                   placeholder="Значение" value="<%=value%>" required>
                         </label>
                     </div>
                     <div class="col-md-4">
                         <label for="srcUnit">Исходные единицы
+                            <% String srcUnit = (String) request.getAttribute("srcUnit"); %>
                             <select name="srcUnit" id="srcUnit" class="form-control" required>
-                                <option value="CELSIUS" selected>Цельсий</option>
-                                <option value="KELVIN">Кельвин</option>
-                                <option value="FAHRENHEIT">Фаренгейт</option>
+                                <option value="CELSIUS" <%=srcUnit.equals("CELSIUS") ? "selected" : ""%>>Цельсий</option>
+                                <option value="KELVIN" <%=srcUnit.equals("KELVIN") ? "selected" : ""%>>Кельвин</option>
+                                <option value="FAHRENHEIT" <%=srcUnit.equals("FAHRENHEIT") ? "selected" : ""%>>Фаренгейт</option>
                             </select>
                         </label>
                     </div>
                     <div class="col-md-4">
-                        <label for="srcUnit">Конечные единицы
+                        <label for="resUnit">Конечные единицы
+                            <% String resUnit = (String) request.getAttribute("resUnit"); %>
                             <select name="resUnit" id="resUnit" class="form-control" required>
-                                <option value="CELSIUS" selected>Цельсий</option>
-                                <option value="KELVIN">Кельвин</option>
-                                <option value="FAHRENHEIT">Фаренгейт</option>
+                                <option value="CELSIUS" <%=resUnit.equals("CELSIUS") ? "selected" : ""%>>Цельсий</option>
+                                <option value="KELVIN" <%=resUnit.equals("KELVIN") ? "selected" : ""%>>Кельвин</option>
+                                <option value="FAHRENHEIT" <%=resUnit.equals("FAHRENHEIT") ? "selected" : ""%>>Фаренгейт</option>
                             </select>
                         </label>
                     </div>
